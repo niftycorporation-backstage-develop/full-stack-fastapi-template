@@ -46,7 +46,7 @@ spec:
       action: fetch:template
       input:
         url: ./content
-        copyWithoutRender:
+        copyWithoutTemplating:
           - .github/workflows/*
         values:
           name: ${{ parameters.name }}
