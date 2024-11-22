@@ -19,10 +19,18 @@ spec:
         name:
           title: Name
           type: string
-          description: Unique name of the component
+          description: ユニークなコンポーネント名を入力してください
           ui:autofocus: true
           ui:options:
             rows: 5
+        owner:
+          title: Owner
+          type: string
+          description: Owner名を選択してください
+          ui:field: OwnerPicker
+          ui:options:
+            catalogFilter:
+              kind: Group
     - title: Choose a location
       required:
         - repoUrl
