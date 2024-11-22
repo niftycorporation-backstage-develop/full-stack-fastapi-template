@@ -12,9 +12,10 @@ spec:
   # These parameters are used to generate the input form in the frontend, and are
   # used to gather input data for the execution of the template.
   parameters:
-    - title: Fill in some steps
+    - title: コンポーネント情報を入力
       required:
         - name
+        - owner
       properties:
         name:
           title: Name
@@ -58,6 +59,7 @@ spec:
           - .github/workflows/*
         values:
           name: ${{ parameters.name }}
+          owner: ${{ parameters.owner }}
 
     # This step publishes the contents of the working directory to GitHub.
     - id: publish
