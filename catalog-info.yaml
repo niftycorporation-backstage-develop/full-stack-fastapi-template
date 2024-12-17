@@ -54,7 +54,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: ./content
+        url: https://api.github.com/repos/niftycorporation-backstage-develop/full-stack-fastapi-template/contents?ref=master
         copyWithoutTemplating:
           - .github/workflows/*
         values:
