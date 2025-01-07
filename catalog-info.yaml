@@ -54,27 +54,12 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: .
+        url: ./content
         copyWithoutTemplating:
           - .github/workflows/*
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}
-
-    - id: delete-catalog-info
-      name: Delete catalog-info.yaml
-      action: fs:delete
-      input:
-        files:
-          - catalog-info.yaml
-
-    - id: rename-catalog-info-template
-      name: Rename catalog-info-template.yaml
-      action: fs:rename
-      input:
-        files:
-          - from: catalog-info-template.yaml
-            to: catalog-info.yaml
 
     # This step publishes the contents of the working directory to GitHub.
     - id: publish
