@@ -27,11 +27,8 @@ spec:
         owner:
           title: Owner
           type: string
-          description: Owner名を選択してください
-          ui:field: OwnerPicker
-          ui:options:
-            catalogFilter:
-              kind: Group
+          description: Ownerを選択してください。自分が所属するOwnerに限ります。
+          ui:field: MyGroupsPicker
     - title: Choose a location
       required:
         - repoUrl
@@ -69,7 +66,7 @@ spec:
         allowedHosts: ["github.com"]
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
-     #   access: ${{ parameters.owner | replace("group:", "") }}
+        access: ${{ parameters.owner | replace("group:", "") }}
 
     # The final step is to register our new component in the catalog.
     - id: register
