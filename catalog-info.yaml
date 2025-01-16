@@ -6,7 +6,7 @@ metadata:
   title: Full Stack FastAPI Template
   description: Full stack, modern web application template. Using FastAPI, React, SQLModel, PostgreSQL, Docker, GitHub Actions, automatic HTTPS and more.
 spec:
-  owner: group:backstage-manager
+  owner: group:niftycorporation-backstage-develop/backstage-manager
   type: service
 
   # These parameters are used to generate the input form in the frontend, and are
